@@ -1,6 +1,8 @@
 var express = require('express');
 var router = express.Router();
-var request = require('request');
+var request = require('request'),   
+	cachedRequest = require('cached-request')(request),
+	cacheDirectory = "/tmp/cache";
 var cheerio = require('cheerio');
 
 router.get('/hours', function(req, res) {
@@ -95,7 +97,11 @@ function getTime(time) {
 
 function getHours(callback) {
 	var url = 'https://www.library.ucla.edu/hours';
-	request(url, function(err, resp, body) {
+	var options = {
+	    url: "https://www.library.ucla.edu/hours",
+	    ttl: 86400 //1 day 
+	 };
+	cachedRequest(options, function(err, resp, body) {
 		$ = cheerio.load(body);
 		var tables = $('.opening-hours-week');
 		var libraries = [];
