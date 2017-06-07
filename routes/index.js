@@ -180,26 +180,48 @@ function getHours(callback) {
 		};
 		finalData[0].name = "Arts Library";
 		finalData[0].id = "5";
+		finalData[0].geo = [34.074079, -118.439218];
+
 		finalData[1].name = "Biomedical Library"
 		finalData[1].id = "1";
+		finalData[1].geo = [34.066639, -118.442408];
+
 		finalData[2].name = "East Asian Library"
 		finalData[2].id = "10";
+		finalData[2].geo = [34.074759, -118.441832];
+
 		finalData[3].name = "Law Library"
 		finalData[3].id = "2";
+		finalData[3].geo = [34.066639, -118.442408];
+
 		finalData[4].name = "Library Special Collections"
 		finalData[4].id = "3";
+		finalData[4].geo = [34.066639, -118.442408];
+
 		finalData[5].name = "Management Library"
 		finalData[5].id = "14";
+		finalData[5].geo = [34.07435, -118.443379];
+
 		finalData[6].name = "Music Library"
 		finalData[6].id = "16";
+		finalData[6].geo = [34.07094, -118.440417];
+
 		finalData[7].name = "Powell Library"
 		finalData[7].id = "7";
+		finalData[7].geo = [34.07162, -118.44218];
+
 		finalData[8].name = "Research Library"
 		finalData[8].id = "20";
+		finalData[8].geo = [34.074954, -118.44165];
+
 		finalData[9].name = "Science and Engineering Library"
 		finalData[9].id = "25";
+		finalData[9].geo = [34.068826, -118.442706];
+
 		finalData[10].name = "Southern Regional Library Facility"
 		finalData[10].id = "27";
+		finalData[10].geo = [34.070864, -118.454188];
+
 		
 		var month = new Array();
 		month[0] = "January";
